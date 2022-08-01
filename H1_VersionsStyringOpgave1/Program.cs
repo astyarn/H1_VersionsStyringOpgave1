@@ -31,12 +31,12 @@ namespace H1_VersionsStyringOpgave1
             return value;
         }
 
-        static double Plus()
+        static double Plus(double tal1, double tal2)
         {
-            return 0;
+            return ;
         }
 
-        static double Minus()
+        static double Minus(double tal1, double tal2)
         {
             return 0;
         }
@@ -69,7 +69,7 @@ namespace H1_VersionsStyringOpgave1
             switch (valg)
             {
                 case 1:
-                    resultat = Plus();
+                    resultat = Plus(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
                 case 2:
                     resultat =  Minus();

@@ -8,6 +8,8 @@ namespace H1_VersionsStyringOpgave1
 {
     internal class Program
     {
+        static string sTal1;
+        static string sTal2;
         static int Velkomst()
         {
             Console.WriteLine("Velkommen til Lommeregner med Versions control");
@@ -41,14 +43,14 @@ namespace H1_VersionsStyringOpgave1
             return 0;
         }
 
-        static double Gange()
+        static double Gange(double tal1, double tal2)
         {
-            return 0;
+            return tal1 * tal2;
         }
 
-        static double Dividere()
+        static double Dividere(double tal1, double tal2)
         {
-            return 0;
+            return tal1 / tal2;
         }
 
         static void UdskrivResultat(double temp)
@@ -75,10 +77,10 @@ namespace H1_VersionsStyringOpgave1
                     resultat =  Minus();
                     break;
                 case 3:
-                    resultat =  Gange();
+                    resultat =  Gange(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
                 case 4:
-                    resultat =  Dividere();
+                    resultat =  Dividere(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
 
                 default:
@@ -88,6 +90,7 @@ namespace H1_VersionsStyringOpgave1
 
 
             UdskrivResultat(resultat);
+            Console.ReadLine();
         }
     }
 }

@@ -86,10 +86,9 @@ namespace H1_VersionsStyringOpgave1
                 default:
                     break;
             }
-            
+
             UdskrivResultat(resultat);
             Console.ReadLine();
-            //hey hvordan har du det?
         }
     }
 }

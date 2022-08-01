@@ -35,12 +35,12 @@ namespace H1_VersionsStyringOpgave1
 
         static double Plus(double tal1, double tal2)
         {
-            return ;
+            return  tal1 + tal2;
         }
 
         static double Minus(double tal1, double tal2)
         {
-            return 0;
+            return tal1 - tal2;
         }
 
         static double Gange(double tal1, double tal2)
@@ -74,7 +74,7 @@ namespace H1_VersionsStyringOpgave1
                     resultat = Plus(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
                 case 2:
-                    resultat =  Minus();
+                    resultat =  Minus(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
                 case 3:
                     resultat =  Gange(ReadDouble(sTal1), ReadDouble(sTal2));
@@ -86,8 +86,6 @@ namespace H1_VersionsStyringOpgave1
                 default:
                     break;
             }
-
-
 
             UdskrivResultat(resultat);
             Console.ReadLine();

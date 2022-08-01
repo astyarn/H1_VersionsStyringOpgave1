@@ -23,6 +23,14 @@ namespace H1_VersionsStyringOpgave1
             return heltal;
         }
 
+        static double ReadDouble(string prompt)         //Metode til at indlæse en double fra consol input
+        {
+            Console.Write(prompt);
+            string input = Console.ReadLine();
+            double value = Convert.ToDouble(input);
+            return value;
+        }
+
         static double Plus()
         {
             return 0;
@@ -76,6 +84,8 @@ namespace H1_VersionsStyringOpgave1
                 default:
                     break;
             }
+
+
 
             UdskrivResultat(resultat);
         }

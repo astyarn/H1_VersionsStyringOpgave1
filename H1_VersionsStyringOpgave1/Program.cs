@@ -89,6 +89,7 @@ namespace H1_VersionsStyringOpgave1
 
             UdskrivResultat(resultat);
             Console.ReadLine();
+            //Dette er en kommentar til at fremprovokere en commit konflikt
         }
     }
 }

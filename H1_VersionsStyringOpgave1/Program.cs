@@ -23,27 +23,27 @@ namespace H1_VersionsStyringOpgave1
             return heltal;
         }
 
-        static int Plus()
+        static double Plus()
         {
             return 0;
         }
 
-        static int Minus()
+        static double Minus()
         {
             return 0;
         }
 
-        static int Gange()
+        static double Gange()
         {
             return 0;
         }
 
-        static int Dividere()
+        static double Dividere()
         {
             return 0;
         }
 
-        static void UdskrivResultat(int temp)
+        static void UdskrivResultat(double temp)
         {
             Console.WriteLine("---------------------");
             Console.Write("Resultat: ");
@@ -56,7 +56,7 @@ namespace H1_VersionsStyringOpgave1
         {
             int valg = Velkomst();
 
-            int resultat = 0;
+            double resultat = 0;
 
             switch (valg)
             {

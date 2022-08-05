@@ -24,13 +24,13 @@ namespace H1_VersionsStyringOpgave1
             string input = Console.ReadLine();
             int heltal = Convert.ToInt32(input);
             return heltal;
-        }
+        }       //Skriver velkomst beskeden
 
         static void TalBesked()
         {
             Console.WriteLine("Indtast nu de to tal der skal udføres regneopration på.\n" +
                 "Tryk enter efter hvert tal.");
-        }
+        }   //skriver hvad brugeren skal gøre ved indtastning af tal
 
         static double ReadDouble(string prompt)         //Metode til at indlæse en double fra consol input
         {
@@ -82,7 +82,7 @@ namespace H1_VersionsStyringOpgave1
 
             TalBesked();
 
-            switch (valg)
+            switch (valg)       //Vælger hvilken function brugeren har valgt
             {
                 case 1:
                     resultat = Plus(ReadDouble(sTal1), ReadDouble(sTal2));

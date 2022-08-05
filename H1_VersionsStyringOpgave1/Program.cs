@@ -13,6 +13,7 @@ namespace H1_VersionsStyringOpgave1
         static int Velkomst()
         {
             Console.WriteLine("Velkommen til Lommeregner med Versions control");
+            Console.WriteLine("Vælg først hvilken funktionalitet der ønskes.");
             Console.WriteLine("---------------------");
             Console.WriteLine("1. Plus");
             Console.WriteLine("2. Minus");

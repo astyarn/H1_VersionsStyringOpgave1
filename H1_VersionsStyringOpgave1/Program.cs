@@ -25,7 +25,7 @@ namespace H1_VersionsStyringOpgave1
             string input = Console.ReadLine();
             int heltal = Convert.ToInt32(input);
             return heltal;
-        }       //Skriver velkomst beskeden
+        }       //Skriver velkomst beskeden 
 
         static void TalBesked()
         {

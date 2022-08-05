@@ -8,6 +8,7 @@ namespace H1_VersionsStyringOpgave1
 {
     internal class Program
     {
+        //TEST
         static string sTal1;
         static string sTal2;
         static int Velkomst()

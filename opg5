@@ -1,0 +1,17 @@
+Undersøg: GitLab Continuous Integration & Deployment
+Hvad betyder CI og hvordan kan man bruge versionsstyrring til dette?
+
+https://docs.gitlab.com/ee/ci/introduction/
+
+CI kan bruges til at automatisk teste den kode man laver, samtidig imens man skriver den og uploader til et repo.
+Versionstyring kan bruges til at se hvilken version fungerer eller hvilke features hvirker i en build.
+
+Undersøg GitHub / Gitlab
+Hvad er forskellene?
+Er der fordele og ulemper ved at bruge den ene frem for den anden?
+
+hovedforskellen ser til at være at gitlab har CI build-in mens github tillader at man vælger sine egne tools, men de skal selv sættes op.
+Github ser også ud til at fokusere på at merge branches tilbage i main, imens gitlab kører mere med seperate branches
+
+Gitlab ser ud til at være en færdig pakkeløsning, fokuseret på pålidelighed.
+Github mere på at være kompatibel med flere services og hurtig.

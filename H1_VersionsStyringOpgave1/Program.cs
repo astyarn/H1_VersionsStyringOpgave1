@@ -8,9 +8,17 @@ namespace H1_VersionsStyringOpgave1
 {
     internal class Program
     {
+        /*
+         * Programmet er en lille consol lommeregner, der tillader en bruger at udføre 5 små regneoperationer
+         * plus, minus, gange, divider og procent regning.
+         * Input er igennem consol vinduet
+         * Output kommer som tekst på consolvinduet
+         */
+
+        //strings til at gemme input fra user af de tal der bruges til regneoperation
         static string sTal1;
         static string sTal2;
-        static int Velkomst()
+        static int Velkomst()   //Skriver velkomst beskeden til consol 
         {
             Console.WriteLine("Velkommen til Lommeregner med Versions control");
             Console.WriteLine("Vælg først hvilken funktionalitet der ønskes.");
@@ -25,15 +33,15 @@ namespace H1_VersionsStyringOpgave1
             string input = Console.ReadLine();
             int heltal = Convert.ToInt32(input);
             return heltal;
-        }       //Skriver velkomst beskeden 
+        }       
 
-        static void TalBesked()
+        static void TalBesked() //Skriver info om tal input til consol
         {
             Console.WriteLine("Indtast nu de to tal der skal udføres regneopration på.\n" +
                 "Tryk enter efter hvert tal.");
-        }   //skriver hvad brugeren skal gøre ved indtastning af tal
+        }  
 
-        static double ReadDouble(string prompt)         //Metode til at indlæse en double fra consol input
+        static double ReadDouble(string prompt)  //Metode til at omregne string til double
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
@@ -41,32 +49,32 @@ namespace H1_VersionsStyringOpgave1
             return value;
         }
 
-        static double Plus(double tal1, double tal2)
+        static double Plus(double tal1, double tal2) //Lægger to tal sammen 
         {
             return  tal1 + tal2;
         }
 
-        static double Minus(double tal1, double tal2)
+        static double Minus(double tal1, double tal2) //Trækker to tal fra hinanden
         {
             return tal1 - tal2;
         }
 
-        static double Gange(double tal1, double tal2)
+        static double Gange(double tal1, double tal2) //Ganger to tal med hinanden
         {
             return tal1 * tal2;
         }
 
-        static double Dividere(double tal1, double tal2)
+        static double Dividere(double tal1, double tal2) //Dividerer to tal
         {
             return tal1 / tal2;
         }
 
-        static double Procent(double tal1, double tal2)
+        static double Procent(double tal1, double tal2) //Udregner hvor mange procent tal1 er af tal2
         {
             return (tal1 / tal2) * 100;
         }
 
-        static void UdskrivResultat(double temp)
+        static void UdskrivResultat(double temp) //Udskriver resultat tekst og indsætter det udregnede resultat
         {
             Console.WriteLine("---------------------");
             Console.Write("Resultat: ");
@@ -77,13 +85,14 @@ namespace H1_VersionsStyringOpgave1
 
         static void Main(string[] args)
         {
-            int valg = Velkomst();
+            int valg = Velkomst();  //Skriver velkomst og modtager bruger input
 
-            double resultat = 0;
+            double resultat = 0;    //Opretter variable til at gemme resultatet
 
-            TalBesked();
+            TalBesked();            
 
-            switch (valg)       //Vælger hvilken function brugeren har valgt
+            //Vælger hvilken function brugeren har valgt
+            switch (valg)        
             {
                 case 1:
                     resultat = Plus(ReadDouble(sTal1), ReadDouble(sTal2));
@@ -105,8 +114,9 @@ namespace H1_VersionsStyringOpgave1
                     break;
             }
 
-            UdskrivResultat(resultat);
-            Console.ReadLine();
+            UdskrivResultat(resultat);  //Udskriver resultatet med tekst
+
+            Console.ReadLine();     //Holder consolvinduet åbent indtil der trykker en vilkårlig taste 
         }
     }
 }

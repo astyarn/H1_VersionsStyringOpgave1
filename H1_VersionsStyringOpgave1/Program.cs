@@ -26,6 +26,12 @@ namespace H1_VersionsStyringOpgave1
             return heltal;
         }
 
+        static void TalBesked()
+        {
+            Console.WriteLine("Indtast nu de to tal der skal udføres regneopration på.\n" +
+                "Tryk enter efter hvert tal.");
+        }
+
         static double ReadDouble(string prompt)         //Metode til at indlæse en double fra consol input
         {
             Console.Write(prompt);
@@ -73,6 +79,8 @@ namespace H1_VersionsStyringOpgave1
             int valg = Velkomst();
 
             double resultat = 0;
+
+            TalBesked();
 
             switch (valg)
             {

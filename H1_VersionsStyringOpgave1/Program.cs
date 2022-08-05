@@ -18,6 +18,7 @@ namespace H1_VersionsStyringOpgave1
             Console.WriteLine("2. Minus");
             Console.WriteLine("3. Gange");
             Console.WriteLine("4. Dividere");
+            Console.WriteLine("5. Udregn procent");
             Console.WriteLine("---------------------");
             Console.Write("Vælg funktion: ");
             string input = Console.ReadLine();
@@ -53,6 +54,11 @@ namespace H1_VersionsStyringOpgave1
             return tal1 / tal2;
         }
 
+        static double Procent(double tal1, double tal2)
+        {
+            return (tal1 / tal2) * 100;
+        }
+
         static void UdskrivResultat(double temp)
         {
             Console.WriteLine("---------------------");
@@ -81,6 +87,9 @@ namespace H1_VersionsStyringOpgave1
                     break;
                 case 4:
                     resultat =  Dividere(ReadDouble(sTal1), ReadDouble(sTal2));
+                    break;
+                case 5:
+                    resultat = Procent(ReadDouble(sTal1), ReadDouble(sTal2));
                     break;
 
                 default:

@@ -18,6 +18,7 @@ namespace H1_VersionsStyringOpgave1
             Console.WriteLine("2. Minus");
             Console.WriteLine("3. Gange");
             Console.WriteLine("4. Dividere");
+            Console.WriteLine("5. Skattefradrag");
             Console.WriteLine("---------------------");
             Console.Write("Vælg funktion: ");
             string input = Console.ReadLine();

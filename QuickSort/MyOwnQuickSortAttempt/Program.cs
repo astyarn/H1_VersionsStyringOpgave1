@@ -23,6 +23,8 @@ namespace MyOwnQuickSortAttempt
             PrintArray(arrTal);
 
             //Kald på quik-sort her
+            int x = arrTal.Length - 1;
+            QuickSort(arrTal, 0, x);
 
             //Udskriver sorteret array
             Console.Write("Det sorterede Array: ");
@@ -36,6 +38,44 @@ namespace MyOwnQuickSortAttempt
                 Console.Write(i + ", ");
             }
             Console.WriteLine();                    //Linjeskift
+        }
+
+        public static void QuickSort(int[] arr, int lowIndx, int highIndx )
+        {
+            if (lowIndx < highIndx)     //tjek om der mere end et tal i array'et
+            {
+                //Find pivot index
+                int pivotIndx = OpdelArray(arr, lowIndx, highIndx);
+
+                //Udfør quicksort på de to dele (hvis de eksisterer)
+                QuickSort(arr, lowIndx, pivotIndx - 1);
+                QuickSort(arr, pivotIndx + 1, highIndx);
+            }
+        }
+
+        public static int OpdelArray(int[] arr, int lowIndx, int highIndx)
+        {
+            //fastlæg pivot strategi
+            int pivotVærdi = arr[highIndx];
+
+            //tælle vriable
+            int i = (lowIndx - 1);
+
+            for (int j = lowIndx; j < highIndx; j++)
+            {
+                if (arr[j] < pivotVærdi)
+                {
+                    i++;
+                    SwapPlaces(arr, i, j);
+                }
+            }
+            SwapPlaces(arr, i + 1, highIndx);
+            return (i + 1);
+        }
+
+        static void SwapPlaces(int[] arr, int i, int j)        
+        {
+            (arr[j], arr[i]) = (arr[i], arr[j]);
         }
     }
 }
